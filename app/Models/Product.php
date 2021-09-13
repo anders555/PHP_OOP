@@ -1,0 +1,16 @@
+<?php
+
+
+namespace App\Models;
+
+
+use App\Core\Model;
+
+class Product extends Model
+{
+    protected static $tablename = 'products';
+
+    public $name;
+    public $price;
+
+}

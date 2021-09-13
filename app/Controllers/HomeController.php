@@ -4,14 +4,18 @@
 namespace App\Controllers;
 
 
+use App\Models\Page;
+
 class HomeController
 {
     public function index(){
-       render('home/index', [
-           'name' => 'Andrew'
-       ]);
+        $pages = Page::search();
+        render('home/index', [
+            'templatePages' => $pages
+        ]);
     }
+
     public function contacts(){
-        echo 'contacts';
+        echo "contacts";
     }
 }

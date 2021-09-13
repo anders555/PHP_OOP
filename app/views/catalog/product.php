@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,15 +37,13 @@
 </nav>
 <!-- Page Header-->
 
-
+<?php
+foreach ($products as $product ):
+?>
 <header class="masthead" style="background-image: url('/assets/img/post-bg.jpg')">
-    <?php
-    foreach ($templateProducts as $product ):
-    ?>
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-
                 <div class="post-heading">
                     <h1><?= $product->name?>></h1>
                     <h2 class="subheading"><?= $product->price?></h2>
@@ -58,7 +57,6 @@
         </div>
     </div>
 </header>
-<?php endforeach; ?>
 <!-- Post Content-->
 <article class="mb-4">
     <div class="container px-4 px-lg-5">

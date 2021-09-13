@@ -11,7 +11,7 @@ class DB
     public static function getConnection()
     {
         if (is_null(self::$connection)) {
-            self::$connection = new \mysqli('localhost', 'homestead', 'secret', 'tms', '3306');
+            self::$connection = new \mysqli('localhost', 'homestead', 'secret', 'TMS', '3306');
         }
 
         return self::$connection;

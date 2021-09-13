@@ -1,3 +1,7 @@
+<?php
+print_r($page);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,19 +39,13 @@
     </div>
 </nav>
 <!-- Page Header-->
-
-
 <header class="masthead" style="background-image: url('/assets/img/post-bg.jpg')">
-    <?php
-    foreach ($templateProducts as $product ):
-    ?>
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-
                 <div class="post-heading">
-                    <h1><?= $product->name?>></h1>
-                    <h2 class="subheading"><?= $product->price?></h2>
+                    <h1><?= $page->name?>></h1>
+                    <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
                     <span class="meta">
                                 Posted by
                                 <a href="#!">Start Bootstrap</a>
@@ -58,16 +56,16 @@
         </div>
     </div>
 </header>
-<?php endforeach; ?>
 <!-- Post Content-->
 <article class="mb-4">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                Placeholder text by
-                <a href="http://spaceipsum.com/">Space Ipsum</a>
-                &middot; Images by
-                <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>
+                <?=$page->content ?>
+                    Placeholder text by
+                    <a href="http://spaceipsum.com/">Space Ipsum</a>
+                    &middot; Images by
+                    <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>
                 </p>
             </div>
         </div>
